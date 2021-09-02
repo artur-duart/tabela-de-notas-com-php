@@ -49,8 +49,56 @@ table th {
     background-color: #141414;
 }
 
+table tr:hover {
+    cursor: pointer;
+    background-color: #800000;
+}
+
 table td,
 th {
     border: 1px solid #FEFEFE;
     padding: 10px;
+}
+
+.container-form-nota {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF99;
+}
+
+.container-form-nota input {
+    min-width: 140px;
+    min-height: 32px;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+.container-form-nota button {
+    padding: 5px;
+    min-height: 32px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.container-form-nota button:hover {
+    color: #141414;
+    background-color: white;
+}
+
+.container-form-nota form {
+    padding: 20px;
+    background-color: #141414;
+    border-radius: 10px;
 }
