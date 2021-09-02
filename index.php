@@ -1,22 +1,15 @@
-<?php 
-    require("./alunos.php");
-    require("./funcoes.php");
-    aprovarReprovar($alunos);
+<?php
+require("./alunos.php");
+require("./funcoes.php");
+aprovarReprovar($alunos);
 
-    foreach ($alunos as $aluno) {
-        if($aluno["situacao"] == "Aprovado"){
-            $class=".aprovado";
-        }
-    }
-
-
-    //Importar o Arquivo de funções (criá-lo)
-    //Chamar a função fechar notas e pronto
-    //Pintar a celula do aluno aprovado de verde
+//Importar o Arquivo de funções (criá-lo)
+//Chamar a função fechar notas e pronto
+//Pintar a celula do aluno aprovado de verde
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -36,17 +29,13 @@
                 <th>Nota</th>
                 <th>Situação</th>
             </tr>
-            <?php foreach ($alunos as $aluno): ?>
-            <tr>
-                <td><?=$aluno["nome"]?></td>
-                <td><?=$aluno["idade"]?></td>
-                <td><?=$aluno["nota"]?></td>
-                <td class="<?=$classe?>"><?=
-                    isset($aluno["situacao"]) ?
-                    $aluno["situacao"] :
-                    ""
-                ?></td>
-            </tr>
+            <?php foreach ($alunos as $aluno) : ?>
+                <tr>
+                    <td><?= $aluno["nome"] ?></td>
+                    <td><?= $aluno["idade"] ?></td>
+                    <td><?= $aluno["nota"] ?></td>
+                    <td class="<?= strtolower($aluno["situacao"]) ?>"><?= isset($aluno["situacao"]) ? $aluno["situacao"] : "" ?></td>
+                </tr>
             <?php endforeach; ?>
         </table>
     </section>
